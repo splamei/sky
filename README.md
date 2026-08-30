@@ -31,7 +31,7 @@ This fork does maintain upstream changes which we sync every so often.
 ### Using the repo
 
  1. Clone the repo and use the main branch
-    - `git clone -b master https://github.com/misskey-dev/misskey.git`
+    - `git clone -b master https://github.com/splamei/sky.git`
     - `cd misskey`
     - `git checkout master`
 2. Create `.config/default.yml` and have the contents the same as the `.config/docker_example.yml` file from this repo with some adjustments you would like
