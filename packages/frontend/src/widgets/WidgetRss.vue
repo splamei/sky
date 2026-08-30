@@ -37,7 +37,7 @@ const widgetPropsDef = {
 	url: {
 		type: 'string',
 		label: i18n.ts._widgetOptions._rss.url,
-		default: 'http://feeds.afpbb.com/rss/afpbb/afpbbnews',
+		default: 'https://www.veemo.uk/feed',
 		manualSave: true,
 	},
 	refreshIntervalSec: {

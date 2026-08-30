@@ -19,3 +19,4 @@ DD-MM-YYYY is used here
 - Added our own security policy for this repo to `SECURITY.md` along side Misskey's
 - Added `helpers/export.sh` for account data exporting
 - Added `helpers/clearUsername.sh` for account username clearing
+- Changed the default URL for RSS feeds to 'https://www.veemo.uk/feed'

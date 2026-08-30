@@ -128,7 +128,7 @@ const userListsDef = computed(() => {
 watch(() => statusbar.type, () => {
 	if (statusbar.type === 'rss') {
 		statusbar.name = 'NEWS';
-		statusbar.props.url = 'http://feeds.afpbb.com/rss/afpbb/afpbbnews';
+		statusbar.props.url = 'https://www.veemo.uk/feed';
 		statusbar.props.shuffle = true;
 		statusbar.props.refreshIntervalSec = 120;
 		statusbar.props.display = 'marquee';
