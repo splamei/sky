@@ -23,3 +23,4 @@ DD-MM-YYYY is used here
 - Removed some of Misskey's original GitHub workflows
 - Added `privacy.ts` to mask user's IP addresses (for privacy)
 - Made it so sign in requests will mask IP addresses for privacy
+- Made it so request headers for sign in requests are no longer stored
