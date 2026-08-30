@@ -13,3 +13,4 @@ DD-MM-YYYY is used here
 - Added `SKY.CHANGES.md`
 - Updated `README.md`
 - Added `deploy.yml` for automatic deployment
+- Disabled the federation warning that Misskey does
