@@ -20,3 +20,4 @@ DD-MM-YYYY is used here
 - Added `helpers/export.sh` for account data exporting
 - Added `helpers/clearUsername.sh` for account username clearing
 - Changed the default URL for RSS feeds to 'https://www.veemo.uk/feed'
+- Removed some of Misskey's original GitHub workflows
