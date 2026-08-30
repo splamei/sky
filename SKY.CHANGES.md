@@ -11,6 +11,9 @@ DD-MM-YYYY is used here
 ## Changes
 
 - Added `SKY.CHANGES.md`
-- Updated `README.md`
+- Fully updated `README.md` for the purposes of this repo
 - Added `deploy.yml` for automatic deployment
 - Disabled the federation warning that Misskey does
+- Fully updated `CONTRIBUTING.md` for the purposes of this repo
+- Added `DCO.md`
+- Added our own security policy for this repo to `SECURITY.md` along side Misskey's
