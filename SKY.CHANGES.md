@@ -21,3 +21,4 @@ DD-MM-YYYY is used here
 - Added `helpers/clearUsername.sh` for account username clearing
 - Changed the default URL for RSS feeds to 'https://www.veemo.uk/feed'
 - Removed some of Misskey's original GitHub workflows
+- Added `privacy.ts` to mask user's IP addresses (for privacy)
