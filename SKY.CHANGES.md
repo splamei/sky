@@ -17,3 +17,4 @@ DD-MM-YYYY is used here
 - Fully updated `CONTRIBUTING.md` for the purposes of this repo
 - Added `DCO.md`
 - Added our own security policy for this repo to `SECURITY.md` along side Misskey's
+- Added `helpers/export.sh` for account data exporting
