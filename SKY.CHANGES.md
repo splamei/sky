@@ -25,3 +25,4 @@ DD-MM-YYYY is used here
 - Made it so sign in requests will mask IP addresses for privacy
 - Made it so request headers for sign in requests are no longer stored
 - Made it so old signin records will be deleted after 27 days days of the inital attempt
+- Changed the 'Login history' text to 'Recent login history' (EN only)
