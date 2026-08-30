@@ -6,7 +6,7 @@ This is a modified version of Misskey! All the modifications, new additions and 
 
 This repo is a fork of Misskey for easy updating with my own Misskey server and for some minor adjustments. The extra changes are not designed with support for third-party servers in-mind (though I try too anyway). This repo exists for transparency and to comply with Misskey's licence.
 
-If you want to try Misskey, use their [official website and repo](https://github.com/misskey-dev/misskey) for the best support and latest features.
+If you want to try Misskey, use their [official website and repo](https://github.com/misskey-dev/misskey) for the best support and latest features, or check out it's documentation to learn more about Misskey using their [official documentation](https://misskey-hub.net/en/docs/).
 
 This fork does maintain upstream changes which we sync every so often.
 
