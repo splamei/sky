@@ -125,7 +125,7 @@ export class DownloadService {
 			throw new StatusError("Invalid URL", 400, "Invalid URL");
 		}
 
-		if (urlObj.protocol !== "https:")
+		if (urlObj.protocol !== "https:" && urlObj.protocol !== "http:")
 		{
 			throw new StatusError("Invalid URL", 400, "Invalid URL");
 		}
