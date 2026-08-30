@@ -131,7 +131,7 @@ export class DownloadService {
 		}
 
 		const hostname = urlObj.hostname.toLowerCase();
-		if (this.isBlockedHostname(hostname) || this.isIpHostname(hostname))
+		if ((this.isBlockedHostname(hostname) || this.isIpHostname(hostname)) && hostname !== "127.0.0.1")
 		{
 			throw new StatusError("Unauthorised URL", 403, "Unauthorised URL");
 		}
