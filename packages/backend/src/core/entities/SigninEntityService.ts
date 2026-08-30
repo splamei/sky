@@ -25,7 +25,7 @@ export class SigninEntityService {
 			id: src.id,
 			createdAt: this.idService.parse(src.id).date.toISOString(),
 			ip: maskIp(src.ip),
-			headers: {},
+			headers: {}, // src.headers
 			success: src.success,
 		};
 	}

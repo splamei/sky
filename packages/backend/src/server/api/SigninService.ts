@@ -43,7 +43,7 @@ export class SigninService {
 				id: this.idService.gen(),
 				userId: user.id,
 				ip: maskIp(request.ip),
-				headers: {},
+				headers: {}, // src.headers
 				success: true,
 			});
 
