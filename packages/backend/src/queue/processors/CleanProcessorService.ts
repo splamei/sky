@@ -6,7 +6,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { In, LessThan } from 'typeorm';
 import { DI } from '@/di-symbols.js';
-import type { AntennasRepository, RoleAssignmentsRepository, UserIpsRepository } from '@/models/_.js';
+import type { AntennasRepository, RoleAssignmentsRepository, UserIpsRepository, SigninsRepository } from '@/models/_.js';
 import type Logger from '@/logger.js';
 import { bindThis } from '@/decorators.js';
 import { IdService } from '@/core/IdService.js';
@@ -14,6 +14,9 @@ import type { Config } from '@/config.js';
 import { ReversiService } from '@/core/ReversiService.js';
 import { QueueLoggerService } from '../QueueLoggerService.js';
 import type * as Bull from 'bullmq';
+
+// Make this a bit lower then the wanted value to equate for the job running once every day at midnight
+const siginHistoryRetentionMs = 27 * 24 * 60 * 60 * 1000; // 27 days
 
 @Injectable()
 export class CleanProcessorService {
@@ -32,6 +35,9 @@ export class CleanProcessorService {
 		@Inject(DI.roleAssignmentsRepository)
 		private roleAssignmentsRepository: RoleAssignmentsRepository,
 
+		@Inject(DI.signinsRepository)
+		private signinsRepository: SigninsRepository,
+
 		private queueLoggerService: QueueLoggerService,
 		private reversiService: ReversiService,
 		private idService: IdService,
@@ -46,6 +52,15 @@ export class CleanProcessorService {
 		this.userIpsRepository.delete({
 			createdAt: LessThan(new Date(Date.now() - (1000 * 60 * 60 * 24 * 90))),
 		});
+
+		// Clears old sign in requests
+		const signinCutoffId = this.idService.gen(
+			Date.now() - siginHistoryRetentionMs,
+		);
+		const signinDeletionResult = await this.signinsRepository.delete({
+			id: LessThan(signinCutoffId),
+		});
+		this.logger.info(`Deleted ${signinDeletionResult.affected ?? 0} old and expired sign in records`,);
 
 		// 使われてないアンテナを停止
 		if (this.config.deactivateAntennaThreshold > 0) {
