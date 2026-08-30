@@ -15,6 +15,7 @@ import { bindThis } from '@/decorators.js';
 import { EmailService } from '@/core/EmailService.js';
 import { NotificationService } from '@/core/NotificationService.js';
 import type { FastifyRequest, FastifyReply } from 'fastify';
+import { maskIp } from '@/misc/privacy.js';
 
 @Injectable()
 export class SigninService {
@@ -41,7 +42,7 @@ export class SigninService {
 			const record = await this.signinsRepository.insertOne({
 				id: this.idService.gen(),
 				userId: user.id,
-				ip: request.ip,
+				ip: maskIp(request.ip),
 				headers: request.headers as any,
 				success: true,
 			});

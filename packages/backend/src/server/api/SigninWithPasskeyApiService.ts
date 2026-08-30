@@ -25,6 +25,7 @@ import { RateLimiterService } from './RateLimiterService.js';
 import { SigninService } from './SigninService.js';
 import type { AuthenticationResponseJSON } from '@simplewebauthn/server';
 import type { FastifyReply, FastifyRequest } from 'fastify';
+import { maskIp } from '@/misc/privacy.js';
 
 @Injectable()
 export class SigninWithPasskeyApiService {
@@ -77,7 +78,7 @@ export class SigninWithPasskeyApiService {
 			await this.signinsRepository.insert({
 				id: this.idService.gen(),
 				userId: userId,
-				ip: request.ip,
+				ip: maskIp(request.ip),
 				headers: request.headers as any,
 				success: false,
 			});

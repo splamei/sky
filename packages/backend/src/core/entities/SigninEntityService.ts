@@ -8,6 +8,7 @@ import type { } from '@/models/Blocking.js';
 import type { MiSignin } from '@/models/Signin.js';
 import { bindThis } from '@/decorators.js';
 import { IdService } from '@/core/IdService.js';
+import { maskIp } from '@/misc/privacy.js';
 
 @Injectable()
 export class SigninEntityService {
@@ -23,7 +24,7 @@ export class SigninEntityService {
 		return {
 			id: src.id,
 			createdAt: this.idService.parse(src.id).date.toISOString(),
-			ip: src.ip,
+			ip: maskIp(src.ip),
 			headers: src.headers,
 			success: src.success,
 		};
