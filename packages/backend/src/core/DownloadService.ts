@@ -43,7 +43,7 @@ export class DownloadService {
 		const operationTimeout = 60 * 1000;
 		const maxSize = this.config.maxFileSize;
 
-		const urlObj = new URL(url);
+		const urlObj = this.verifyExternalUrl(url);
 		let filename = urlObj.pathname.split('/').pop() ?? 'untitled';
 
 		const req = got.stream(url, {
@@ -111,6 +111,54 @@ export class DownloadService {
 		return {
 			filename,
 		};
+	}
+
+	private verifyExternalUrl(url: string)
+	{
+		let urlObj: URL;
+		try
+		{
+			urlObj = new URL(url);
+		}
+		catch
+		{
+			throw new StatusError("Invalid URL", 400, "Invalid URL");
+		}
+
+		if (urlObj.protocol !== "https:")
+		{
+			throw new StatusError("Invalid URL", 400, "Invalid URL");
+		}
+
+		const hostname = urlObj.hostname.toLowerCase();
+		if (this.isBlockedHostname(hostname) || this.isIpHostname(hostname))
+		{
+			throw new StatusError("Unauthorised URL", 400, "Unauthorised URL");
+		}
+
+		return urlObj;
+	}
+
+	private isBlockedHostname(hostname: string): boolean
+	{
+		return hostname === "localhost" || hostname.endsWith(".localhost") || hostname.endsWith(".local");
+	}
+
+	private isIpHostname(hostname: string): boolean
+	{
+		const ipv4Match = hostname.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/);
+		if (ipv4Match)
+		{
+			return true;
+		}
+
+		const normalised = hostname.replace(/^\[|\]$/g, '').toLowerCase();
+		if (normalised.includes(":"))
+		{
+			return true;
+		}
+
+		return false;
 	}
 
 	@bindThis
