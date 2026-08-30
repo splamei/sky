@@ -11,4 +11,5 @@ DD-MM-YYYY is used here
 ## Changes
 
 - Added `SKY.CHANGES.md`
-- Updated `README.md` 
+- Updated `README.md`
+- Added `deploy.yml` for automatic deployment
