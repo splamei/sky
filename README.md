@@ -1,63 +1,51 @@
-<div align="center">
-<a href="https://misskey-hub.net">
-	<img src="./assets/title_float.svg" alt="Misskey logo" style="border-radius:50%" width="300"/>
-</a>
+## Heads up!
 
-**🌎 **Misskey** is an open source, federated social media platform that's free forever! 🚀**
+This is a modified version of Misskey! All the modifications, new additions and periodic upstream change syncs are listed within the `SKY.CHANGES.md` file
 
-[Learn more](https://misskey-hub.net/)
+## What is this repo?
 
----
+This repo is a fork of Misskey for easy updating with my own Misskey server and for some minor adjustments. The extra changes are not designed with support for third-party servers in-mind (though I try too anyway). This repo exists for transparency and to comply with Misskey's licence.
 
-<a href="https://misskey-hub.net/servers/">
-		<img src="https://custom-icon-badges.herokuapp.com/badge/find_an-instance-acea31?logoColor=acea31&style=for-the-badge&logo=misskey&labelColor=363B40" alt="find an instance"/></a>
+If you want to try Misskey, use their [official website and repo](https://github.com/misskey-dev/misskey) for the best support and latest features.
 
-<a href="https://misskey-hub.net/docs/for-admin/install/guides/">
-		<img src="https://custom-icon-badges.herokuapp.com/badge/create_an-instance-FBD53C?logoColor=FBD53C&style=for-the-badge&logo=server&labelColor=363B40" alt="create an instance"/></a>
+This fork does maintain upstream changes which we sync every so often.
 
-<a href="./CONTRIBUTING.md">
-		<img src="https://custom-icon-badges.herokuapp.com/badge/become_a-contributor-A371F7?logoColor=A371F7&style=for-the-badge&logo=git-merge&labelColor=363B40" alt="become a contributor"/></a>
+## How can I run this?
 
-<a href="https://discord.gg/Wp8gVStHW3">
-		<img src="https://custom-icon-badges.herokuapp.com/badge/join_the-community-5865F2?logoColor=5865F2&style=for-the-badge&logo=discord&labelColor=363B40" alt="join the community"/></a>
+### Using the image
 
-<a href="https://www.patreon.com/syuilo">
-		<img src="https://custom-icon-badges.herokuapp.com/badge/become_a-patron-F96854?logoColor=F96854&style=for-the-badge&logo=patreon&labelColor=363B40" alt="become a patron"/></a>
+> The image is automatically built using a GitHub workflow instead of using commands. You can view the workflow used in `.github/workflows/deploy.yml`
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/misskey-dev/misskey)
+1. Make the location for the container and change directory into it
+2. Setup docker for your usage
+3. Run `mkdir -p ~/misskey/.config ~/misskey/files ~/misskey/db ~/misskey/redis` to create the needed directories
+4. Sometimes, to allow media uploads, you may need to run this command so everything works correctly - `sudo chown -R 991:991 /home/misskeyUser/misskey/files`
+5. Create `.config/default.yml` and have the contents the same as the `.config/docker_example.yml` file from this repo with some adjustments you would like
+	- You should change the default username and password to secure your database and the setup password to secure the initial setup of Misskey
+6. Create `docker-compose.yml` and have the contents the same as the `.config/docker_image_example.yml` file from this repo with some adjustments you would like
+7. Create `.config/docker.env` and have the contents the same as the `.config/docker_example.env` file from this repo with some adjustments you would like
+	- You should change the username and password to match the ones inside `.config/default.yml` to allow everything to run correctly
+8. Run `docker compose run --rm web pnpm run init` to configure everything correctly
+9. Run `docker compose up -d` to start up Misskey
 
-<a href="https://flatt.tech/oss/gmo/trampoline" target="_blank"><img src="https://flatt.tech/assets/images/badges/gmo-oss.svg" height="24px"/></a>
+### Using the repo
 
-</div>
+ 1. Clone the repo and use the main branch
+    - `git clone -b master https://github.com/misskey-dev/misskey.git`
+    - `cd misskey`
+    - `git checkout master`
+2. Create `.config/default.yml` and have the contents the same as the `.config/docker_example.yml` file from this repo with some adjustments you would like
+	- You should change the default username and password to secure your database and the setup password to secure the initial setup of Misskey
+3. Create `docker-compose.yml` and have the contents the same as the `.config/docker_image_example.yml` file from this repo with some adjustments you would like
+4. Create `.config/docker.env` and have the contents the same as the `.config/docker_example.env` file from this repo with some adjustments you would like
+	- You should change the username and password to match the ones inside `.config/default.yml` to allow everything to run correctly
+5. Use `sudo docker compose build` and `sudo docker compose run --rm web pnpm run init` to prepare the container
+6. Finally, run `sudo docker compose up -d` to run it!
 
-## Thanks
+## Extra notes
 
-<a href="https://sentry.io/"><img src="https://github.com/misskey-dev/misskey/assets/4439005/98576556-222f-467a-94be-e98dbda1d852" height="30" alt="Sentry" /></a>
+The name, branding, logo, etc. and any related assets for SplameiPlay and SplameiPlay is property of Splamei. These assets are not licensed under the AGPL licence.
 
-Thanks to [Sentry](https://sentry.io/) for providing the error tracking platform that helps us catch unexpected errors.
+Any and all forks and derived works must use a different name and cannot imply endorsement or affiliation with Splamei, SplameiPlay or projects.
 
-<a href="https://www.chromatic.com/"><img src="https://user-images.githubusercontent.com/321738/84662277-e3db4f80-af1b-11ea-88f5-91d67a5e59f6.png" height="30" alt="Chromatic" /></a>
-
-Thanks to [Chromatic](https://www.chromatic.com/) for providing the visual testing platform that helps us review UI changes and catch visual regressions.
-
-<a href="https://about.codecov.io/for/open-source/"><img src="https://about.codecov.io/wp-content/themes/codecov/assets/brand/sentry-cobranding/logos/codecov-by-sentry-logo.svg" height="30" alt="Codecov" /></a>
-
-Thanks to [Codecov](https://about.codecov.io/for/open-source/) for providing the code coverage platform that helps us improve our test coverage.
-
-<a href="https://crowdin.com/"><img src="https://user-images.githubusercontent.com/20679825/230709597-1299a011-171a-4294-a91e-355a9b37c672.svg" height="30" alt="Crowdin" /></a>
-
-Thanks to [Crowdin](https://crowdin.com/) for providing the localization platform that helps us translate Misskey into many languages.
-
-<a href="https://hub.docker.com/"><img src="https://user-images.githubusercontent.com/20679825/230148221-f8e73a32-a49b-47c3-9029-9a15c3824f92.png" height="30" alt="Docker" /></a>
-
-Thanks to [Docker](https://hub.docker.com/) for providing the container platform that helps us run Misskey in production.
-
----
-
-<div align="center">
-	
-Support us with a ⭐ !
-
-[![Star History Chart](https://api.star-history.com/svg?repos=misskey-dev/misskey&type=Date)](https://star-history.com/#misskey-dev/misskey&Date)
-
-</div>
+This repository is not endorsed, affiliated or associated with Misskey or any other related brands or platforms.
