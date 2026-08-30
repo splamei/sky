@@ -27,3 +27,4 @@ DD-MM-YYYY is used here
 - Made it so old signin records will be deleted after 27 days days of the inital attempt
 - Changed the 'Login history' text to 'Recent login history' (EN only)
 - Added checks to verify URLs in `DownloadService.ts`
+- Added better path checks in `InternalStorageService.ts`

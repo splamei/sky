@@ -23,7 +23,13 @@ export class InternalStorageService {
 
 	@bindThis
 	public resolvePath(key: string) {
-		return Path.resolve(this.path, key);
+		const resolvedPath = Path.resolve(this.path, key);
+		const relative = Path.relative(this.path, resolvedPath);
+		if (relative === '..' || relative.startsWith(`..${Path.sep}`) || Path.isAbsolute(relative))
+		{
+			throw new Error('Invalid storage key path');
+		}
+		return resolvedPath;
 	}
 
 	@bindThis
