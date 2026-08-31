@@ -1,3 +1,13 @@
+<h1 align="center">
+	<span align="center">Splamei Sky
+</h1>
+<p align="center">
+	<img src="https://img.shields.io/github/check-runs/splamei/sky/master">
+	<img src="https://img.shields.io/github/issues/splamei/sky">
+	<img src="https://img.shields.io/github/license/splamei/sky">
+	<img src="https://img.shields.io/github/repo-size/splamei/sky">
+</p>
+
 ## Heads up!
 
 This is a modified version of Misskey! All the modifications, new additions and periodic upstream change syncs are listed within the `SKY.CHANGES.md` file
