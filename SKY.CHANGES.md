@@ -16,6 +16,7 @@ DD-MM-YYYY is used here
 - Updated the webpage comment and default description for Splamei Sky branding
 - Updated the repository URL to 'https://github.com/misskey-dev/misskey' instead of Misskey's original
   - The original repo is still linked within various areas such as the About page and Modified instance notification
+- Changed the name on the about page from 'Misskey' to 'Splamei Sky'
 
 # 30-08-2026
 
