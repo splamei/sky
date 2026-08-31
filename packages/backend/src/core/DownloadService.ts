@@ -46,7 +46,7 @@ export class DownloadService {
 		const urlObj = this.verifyExternalUrl(url);
 		let filename = urlObj.pathname.split('/').pop() ?? 'untitled';
 
-		const req = got.stream(url, {
+		const req = got.stream(urlObj.toString(), {
 			headers: {
 				'User-Agent': this.config.userAgent,
 			},
