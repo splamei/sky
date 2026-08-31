@@ -18,7 +18,8 @@ DD-MM-YYYY is used here
   - The original repo is still linked within various areas such as the About page and Modified instance notification
 - Changed the name on the about page from 'Misskey' to 'Splamei Sky'
 - Improved URL validations inside of `packages/backend/src/core/DownloadService.ts`
-- Improved randomness security
+- Improved how random values are calculated and determained
+- Improved how strings are handled and maniplulated for security
 
 # 30-08-2026
 
