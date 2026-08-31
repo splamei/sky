@@ -28,10 +28,10 @@ const themeColor = chalk.hex('#86b300');
 function greet(props: { version: string; format: LogFormat }) {
 	if (!envOption.quiet && props.format === 'json') {
 		// JSONモードでは生のコンソール出力を避け、各案内を1件ずつ構造化ログにします。
-		bootLogger.info('Welcome to Misskey!');
-		bootLogger.info(`Misskey v${props.version}`, null, true);
-		bootLogger.info('Misskey is an open-source decentralized microblogging platform.');
-		bootLogger.info('If you like Misskey, please consider donating to support dev. https://misskey-hub.net/docs/donate/');
+		bootLogger.info('Welcome to Splamei Sky (Misskey)!');
+		bootLogger.info(`Splamei Sky v${props.version}`, null, true);
+		bootLogger.info('Splamei Sky is an open-source microblogging platform based on Misskey.');
+		bootLogger.info('If you like this software, please consider donating to support the Misskey dev. https://misskey-hub.net/docs/donate/');
 		return;
 	}
 
@@ -45,15 +45,15 @@ function greet(props: { version: string; format: LogFormat }) {
 		console.log(' ' + chalk.gray(v) + themeColor('                        |___|\n'.substring(v.length)));
 		//#endregion
 
-		console.log(' Misskey is an open-source decentralized microblogging platform.');
-		console.log(chalk.rgb(255, 136, 0)(' If you like Misskey, please consider donating to support dev. https://misskey-hub.net/docs/donate/'));
+		console.log(' Splamei Sky is an open-source microblogging platform based on Misskey.');
+		console.log(chalk.rgb(255, 136, 0)(' If you like this software, please consider donating to support the Misskey dev. https://misskey-hub.net/docs/donate/'));
 
 		console.log('');
 		console.log(chalkTemplate`--- ${os.hostname()} {gray (PID: ${process.pid.toString()})} ---`);
 	}
 
-	bootLogger.info('Welcome to Misskey!');
-	bootLogger.info(`Misskey v${props.version}`, null, true);
+	bootLogger.info('Welcome to Splamei Sky (Misskey)!');
+	bootLogger.info(`Splamei Sky v${props.version}`, null, true);
 }
 
 /**

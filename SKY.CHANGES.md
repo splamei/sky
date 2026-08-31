@@ -12,6 +12,7 @@ DD-MM-YYYY is used here
 
 - Updated `package.json` for branding and naming chanages for this repo
 - Updated `en-US.yml` (English locale) for the project's name and branding (keeping a lot of Misskey's original)
+- Changed the boot greet message strings slightly for Splamei Sky branding
 
 # 30-08-2026
 
