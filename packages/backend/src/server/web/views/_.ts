@@ -11,13 +11,13 @@ export const comment = `<!--
  | | | | |_ -|_ -| '_| -_| | |
  |_|_|_|_|___|___|_,_|___|_  |
                          |___|
- Thank you for using Misskey!
- If you are reading this message... how about joining the development?
+ Thank you for using Splamei Sky (Misskey)!
+ If you are reading this message, how about supporting the original project Splamei Sky is based on (Misskey)?
  https://github.com/misskey-dev/misskey
 
 -->`;
 
-export const defaultDescription = '✨🌎✨ A interplanetary communication platform ✨🚀✨';
+export const defaultDescription = 'An open source, microblogging platform, running on Splamei Sky and based on Misskey';
 
 export type MinimumCommonData = {
 	version: string;
