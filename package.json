@@ -1,10 +1,10 @@
 {
-	"name": "misskey",
-	"version": "2026.7.0",
+	"name": "splamei-sky",
+	"version": "1.0.0",
 	"codename": "nasubi",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/misskey-dev/misskey.git"
+		"url": "https://github.com/splamei/sky.git"
 	},
 	"packageManager": "pnpm@11.11.0",
 	"workspaces": [

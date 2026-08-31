@@ -6,6 +6,12 @@ We'll seperate the changes into 'Changes' (changes we make specifically for this
 
 DD-MM-YYYY is used here
 
+# 31-08-2026
+
+## Changes
+
+- Updated `package.json` for branding and naming chanages for this repo
+
 # 30-08-2026
 
 ## Changes
