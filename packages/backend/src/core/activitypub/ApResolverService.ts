@@ -135,15 +135,32 @@ export class Resolver {
 			? await this.apRequestService.signedGet(value, this.user, allowSoftfail) as IObject
 			: await this.httpRequestService.getActivityJson(value, undefined, allowSoftfail)) as IObject;
 
-		if (
-			Array.isArray(object['@context']) ?
-				!(object['@context'] as unknown[]).includes('https://www.w3.org/ns/activitystreams') :
-				object['@context'] !== 'https://www.w3.org/ns/activitystreams'
-		) {
+		if (!this.hasValidActivityStreamsContext(object['@context'])) {
 			throw new IdentifiableError('72180409-793c-4973-868e-5a118eb5519b', 'invalid response');
 		}
 
 		return object;
+	}
+
+	@bindThis
+	private hasValidActivityStreamsContext(context: unknown): boolean {
+		const expected = 'https://www.w3.org/ns/activitystreams';
+		const values = Array.isArray(context) ? context : [context];
+
+		for (const value of values) {
+			if (typeof value !== 'string') continue;
+
+			try {
+				const parsed = new URL(value);
+				const normalized = `${parsed.origin}${parsed.pathname}`;
+				if (normalized === expected) return true;
+			} catch {
+				// Keep compatibility with literal string contexts that are not URL-parsable.
+				if (value === expected) return true;
+			}
+		}
+
+		return false;
 	}
 
 	@bindThis

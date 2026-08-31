@@ -4,6 +4,7 @@
  */
 
 import { parseBigInt16 } from '@/misc/bigint.js';
+import { randomBytes } from 'node:crypto';
 
 const CHARS = '0123456789abcdef';
 
@@ -22,13 +23,7 @@ function getTime(time: number) {
 }
 
 function getRandom() {
-	let str = '';
-
-	for (let i = 0; i < 16; i++) {
-		str += CHARS[Math.floor(Math.random() * CHARS.length)];
-	}
-
-	return str;
+	return randomBytes(8).toString('hex');
 }
 
 export function genObjectId(t: number): string {
