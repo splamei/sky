@@ -11,7 +11,7 @@ TARGET_USER="$1"
 DB_NAME="misskey"
 DB_USER="misskey"
 
-USER_CHECKED_NAMES="'userId', 'followerId', 'authorId', 'targetUserId', 'assigneeId', 'recipientId'"
+USER_CHECKED_NAMES="'userId', 'followerId', 'authorId', 'targetUserId', 'assigneeId', 'recipientId', 'fromUserId', 'ownerId', 'muterId', 'createdById', 'usedById', 'blockerId', 'muterId', 'user1Id', 'user2Id', 'mentionedUserIds'"
 
 # Data not encluded for security like authentication information. DO NOT INCLUDE IT TO PREVENT EXPOSING SENSITIVE DATA!
 EXCLUDED_TABLES="'access_token', 'auth_session', 'password_reset_request', 'user_keypair', 'user_security_key', 'user_publickey'"
