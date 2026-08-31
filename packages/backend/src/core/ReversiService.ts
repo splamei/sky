@@ -24,6 +24,7 @@ import { NotificationService } from '@/core/NotificationService.js';
 import { Serialized } from '@/types.js';
 import { ReversiGameEntityService } from './entities/ReversiGameEntityService.js';
 import type { OnApplicationShutdown, OnModuleInit } from '@nestjs/common';
+import { randomInt } from 'node:crypto';
 
 const INVITATION_TIMEOUT_MS = 1000 * 20; // 20sec
 
@@ -166,7 +167,7 @@ export class ReversiService implements OnApplicationShutdown, OnModuleInit {
 			'BYSCORE');
 
 		if (invitations.length > 0) {
-			const invitorId = invitations[Math.floor(Math.random() * invitations.length)];
+			const invitorId = invitations[randomInt(invitations.length)];
 			await this.redisClient.zrem(`reversi:matchSpecific:${me.id}`, invitorId);
 
 			const game = await this.matched(invitorId, me.id, {
