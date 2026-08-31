@@ -6,7 +6,7 @@
 export class AddSomeUrls1557761316509 {
     async up(queryRunner) {
         await queryRunner.query(`ALTER TABLE "meta" ADD "ToSUrl" character varying(512)`);
-        await queryRunner.query(`ALTER TABLE "meta" ADD "repositoryUrl" character varying(512) NOT NULL DEFAULT 'https://github.com/misskey-dev/misskey'`);
+        await queryRunner.query(`ALTER TABLE "meta" ADD "repositoryUrl" character varying(512) NOT NULL DEFAULT 'https://github.com/splamei/sky'`);
         await queryRunner.query(`ALTER TABLE "meta" ADD "feedbackUrl" character varying(512) DEFAULT 'https://github.com/misskey-dev/misskey/issues/new'`);
     }
     async down(queryRunner) {

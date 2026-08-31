@@ -56,7 +56,7 @@ export const packedMetaLiteSchema = {
 		repositoryUrl: {
 			type: 'string',
 			optional: false, nullable: true,
-			default: 'https://github.com/misskey-dev/misskey',
+			default: 'https://github.com/splamei/sky',
 		},
 		feedbackUrl: {
 			type: 'string',

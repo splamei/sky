@@ -14,6 +14,8 @@ DD-MM-YYYY is used here
 - Updated `en-US.yml` (English locale) for the project's name and branding (keeping a lot of Misskey's original)
 - Changed the boot greet message strings slightly for Splamei Sky branding
 - Updated the webpage comment and default description for Splamei Sky branding
+- Updated the repository URL to 'https://github.com/misskey-dev/misskey' instead of Misskey's original
+  - The original repo is still linked within various areas such as the About page and Modified instance notification
 
 # 30-08-2026
 
