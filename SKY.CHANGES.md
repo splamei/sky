@@ -12,6 +12,7 @@ DD-MM-YYYY is used here
 
 - Updated the donation message for English
   - The message remains and still directs to Misskey's donation page, but is reworded to prevent user confusion
+- Fixed `deploy.yml`
 
 # 31-08-2026
 
