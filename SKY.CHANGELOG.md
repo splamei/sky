@@ -41,3 +41,4 @@ Based on Misskey v2026.7.0
 - Added checks to verify URLs in `DownloadService.ts`
 - Added better path checks in `InternalStorageService.ts`
 - Added `compose_image_example.yml` for using the GHCR image with Docker Compose and updated `README.md` for the new file
+- Updated the package name in `deploy.yml` to splamei-sky

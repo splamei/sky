@@ -11,6 +11,7 @@ DD-MM-YYYY is used here
 ## Changes
 
 - Added `compose_image_example.yml` for using the GHCR image with Docker Compose and updated `README.md` for the new file
+- Updated the package name in `deploy.yml` to splamei-sky
 
 # 01-09-2026
 
