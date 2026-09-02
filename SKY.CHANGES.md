@@ -12,6 +12,7 @@ DD-MM-YYYY is used here
 
 - Added `compose_image_example.yml` for using the GHCR image with Docker Compose and updated `README.md` for the new file
 - Updated the package name in `deploy.yml` to splamei-sky
+- Updated the important notes URL to 'https://www.veemo.uk/splameiaquila/notes' for closer notes towards the goals of Splamei Sky
 
 # 01-09-2026
 
