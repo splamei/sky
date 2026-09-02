@@ -1,0 +1,54 @@
+services:
+  web:
+    image: ghcr.io/splamei/splamei-sky:latest
+    container_name: misskey_web
+    restart: unless-stopped
+    links:
+      - db
+      - redis
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    networks:
+      - internal_network
+      - external_network
+    volumes:
+      - ./.config:/misskey/.config:ro
+      - ./files:/misskey/files
+
+  redis:
+    image: redis:7-alpine
+    container_name: misskey_redis
+    restart: unless-stopped
+    networks:
+      - internal_network
+    volumes:
+      - ./redis:/data
+    healthcheck:
+      test: "redis-cli ping"
+      interval: 5s
+      retries: 20
+
+  db:
+    image: postgres:15-alpine
+    container_name: misskey_db
+    restart: unless-stopped
+    networks:
+      - internal_network
+    env_file:
+      - .config/docker.env
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    healthcheck:
+      test: "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"
+      interval: 5s
+      retries: 20
+
+networks:
+  internal_network:
+    internal: true
+  external_network:

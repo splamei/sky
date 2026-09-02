@@ -6,7 +6,13 @@ We'll seperate the changes into 'Changes' (changes we make specifically for this
 
 DD-MM-YYYY is used here
 
-# 1-09-2026
+# 02-09-2026
+
+## Changes
+
+- Added `compose_image_example.yml` for using the GHCR image with Docker Compose and updated `README.md` for the new file
+
+# 01-09-2026
 
 ## Changes
 

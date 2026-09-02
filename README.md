@@ -32,7 +32,7 @@ This fork does maintain upstream changes which we sync every so often.
 4. Sometimes, to allow media uploads, you may need to run this command so everything works correctly - `sudo chown -R 991:991 /home/misskeyUser/misskey/files`
 5. Create `.config/default.yml` and have the contents the same as the `.config/docker_example.yml` file from this repo with some adjustments you would like
 	- You should change the default username and password to secure your database and the setup password to secure the initial setup of Misskey
-6. Create `docker-compose.yml` and have the contents the same as the `.config/docker_image_example.yml` file from this repo with some adjustments you would like
+6. Create `docker-compose.yml` and have the contents the same as the `compose_image_example.yml` file from this repo with some adjustments you would like
 7. Create `.config/docker.env` and have the contents the same as the `.config/docker_example.env` file from this repo with some adjustments you would like
 	- You should change the username and password to match the ones inside `.config/default.yml` to allow everything to run correctly
 8. Run `docker compose run --rm web pnpm run init` to configure everything correctly

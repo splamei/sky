@@ -40,3 +40,4 @@ Based on Misskey v2026.7.0
 - Changed the 'Login history' text to 'Recent login history' (EN only)
 - Added checks to verify URLs in `DownloadService.ts`
 - Added better path checks in `InternalStorageService.ts`
+- Added `compose_image_example.yml` for using the GHCR image with Docker Compose and updated `README.md` for the new file
