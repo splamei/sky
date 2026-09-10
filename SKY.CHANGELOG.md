@@ -1,5 +1,18 @@
 This file is to track each version and changes. If you want exact dates for changes, check out `SKY.CHANGES.md` instead.
 
+# v1.0.1
+
+Based on Misskey v2026.9.0
+
+## Syncs
+
+- Synced with Misskey version 2026.9.0 and merged changes
+
+## Changes
+
+- Changed the embed colour from MIsskey's Green to a purple colour
+- Changed the name in the about overview (about instance) page to use the name Splamei Sky instead of Misskey
+
 # v1.0.0
 
 Based on Misskey v2026.7.0
