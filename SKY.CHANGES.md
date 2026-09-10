@@ -6,6 +6,12 @@ We'll seperate the changes into 'Changes' (changes we make specifically for this
 
 DD-MM-YYYY is used here
 
+# 10-09-2026
+
+## Changes
+
+- Changed the embed colour from MIsskey's Green to a purple colour
+
 # 09-09-2026
 
 ## Syncs
