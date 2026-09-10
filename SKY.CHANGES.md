@@ -12,6 +12,7 @@ DD-MM-YYYY is used here
 
 - Changed the embed colour from MIsskey's Green to a purple colour
 - Change the name in the about overview (about instance) page to use the name Splamei Sky instead of Misskey
+- Updated the version to v1.0.1
 
 # 09-09-2026
 

@@ -12,6 +12,7 @@ Based on Misskey v2026.9.0
 
 - Changed the embed colour from MIsskey's Green to a purple colour
 - Changed the name in the about overview (about instance) page to use the name Splamei Sky instead of Misskey
+- Updated the version to v1.0.1
 
 # v1.0.0
 
