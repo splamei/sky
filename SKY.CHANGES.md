@@ -6,6 +6,12 @@ We'll seperate the changes into 'Changes' (changes we make specifically for this
 
 DD-MM-YYYY is used here
 
+# 23-09-2026
+
+## Syncs
+
+- Synced with Misskey version 2026.9.1 and merged changes
+
 # 10-09-2026
 
 ## Changes
