@@ -909,7 +909,7 @@ hashtags: "Hashtags"
 troubleshooting: "Troubleshooting"
 useBlurEffect: "Use blur effects in the UI"
 learnMore: "Learn more"
-misskeyUpdated: "Misskey has been updated!"
+misskeyUpdated: "Splamei Sky has been updated!"
 whatIsNew: "Show changes"
 translate: "Translate"
 translatedFrom: "Translated from {x}"
@@ -1671,7 +1671,7 @@ _initialTutorial:
   skipAreYouSure: "Quit Tutorial?"
   _landing:
     title: "Welcome to the Tutorial"
-    description: "Here, you can learn the basics of using Misskey and its features."
+    description: "Here, you can learn the basics of using Splamei Sky / Misskey and its features."
   _note:
     title: "What is a Note?"
     description: "Posts on Misskey and forked software (like Splamei Sky) are called 'Notes.' Notes are arranged chronologically on the timeline and are updated in real-time."
@@ -1688,7 +1688,7 @@ _initialTutorial:
     reactDone: "You can undo a reaction by pressing the '-' button."
   _timeline:
     title: "The Concept of Timelines"
-    description1: "Misskey provides multiple timelines based on usage (some may not be available depending on the server's policies)."
+    description1: "Splamei Sky / Misskey provides multiple timelines based on usage (some may not be available depending on the server's policies)."
     home: "You can view notes from accounts you follow."
     local: "You can view notes from all users on this server."
     social: "Notes from the Home and Local timelines will be displayed."
@@ -1697,7 +1697,7 @@ _initialTutorial:
     description3: "Additionally, there are list timelines and channel timelines. For more details, please refer to {link}."
   _postNote:
     title: "Note Posting Settings"
-    description1: "When posting a note on Misskey, various options are available. The posting form looks like this."
+    description1: "When posting a note on Splamei Sky / Misskey, various options are available. The posting form looks like this."
     _visibility:
       description: "You can limit who can view your note."
       public: "Your note will be visible for all users."
@@ -1725,7 +1725,7 @@ _initialTutorial:
     doItToContinue: "Mark the attachment file as sensitive to proceed."
   _done:
     title: "You've completed the tutorial! 🎉"
-    description: "The functions introduced here are just a small part. For a more detailed understanding of using Misskey, please refer to {link}."
+    description: "The functions introduced here are just a small part. For a more detailed understanding of using Splamei Sky / Misskey, please refer to {link}."
 _timelineDescription:
   home: "In the Home timeline, you can see notes from accounts you follow."
   local: "In the Local timeline, you can see notes from all users on this server."
@@ -2369,7 +2369,7 @@ _soundSettings:
   driveFileTypeWarn: "This file is not supported"
   driveFileTypeWarnDescription: "Select an audio file"
   driveFileDurationWarn: "The audio is too long."
-  driveFileDurationWarnDescription: "Long audio may disrupt using Misskey. Still continue?"
+  driveFileDurationWarnDescription: "Long audio may disrupt using Splamei Sky / Misskey. Still continue?"
   driveFileError: "It couldn't load the sound. Please change the setting."
 _ago:
   future: "Future"
@@ -3279,13 +3279,13 @@ _search:
   postFrom: "Date posted from"
   postTo: "Date posted to"
 _serverSetupWizard:
-  installCompleted: "Misskey installation is now complete!"
+  installCompleted: "Splamei Sky's installation is now complete!"
   firstCreateAccount: "To begin, create an administrator account."
   accountCreated: "Administrator account has been created!"
   serverSetting: "Server Settings"
   youCanEasilyConfigureOptimalServerSettingsWithThisWizard: "This wizard makes it easier to configure the server settings."
   settingsYouMakeHereCanBeChangedLater: "The settings that were changed via this wizard can be adjusted later."
-  howWillYouUseMisskey: "How will you use Misskey?"
+  howWillYouUseMisskey: "How will you use Splamei Sky?"
   _use:
     single: "Single User server"
     single_description: "Use it alone as your own server."

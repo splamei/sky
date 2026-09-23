@@ -12,6 +12,10 @@ DD-MM-YYYY is used here
 
 - Synced with Misskey version 2026.9.1 and merged changes
 
+## Changes
+
+- Changed some EN-US locale text to use Splamei Sky branding instead of Misskey
+
 # 10-09-2026
 
 ## Changes
