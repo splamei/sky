@@ -16,6 +16,7 @@ DD-MM-YYYY is used here
 
 - Changed some EN-US locale text to use Splamei Sky branding instead of Misskey
 - Updated some assets to use Splamei Sky branding instead of Misskey branding (logo, favicon, etc.)
+- Updated the version from 1.0.1 to 1.0.2
 
 # 10-09-2026
 
