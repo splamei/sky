@@ -56,7 +56,7 @@ export const packedMetaLiteSchema = {
 		repositoryUrl: {
 			type: 'string',
 			optional: false, nullable: true,
-			default: 'https://github.com/splamei/sky',
+			default: 'https://github.com/splamei/splamei-sky',
 		},
 		feedbackUrl: {
 			type: 'string',

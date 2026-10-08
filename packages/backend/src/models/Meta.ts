@@ -387,7 +387,7 @@ export class MiMeta {
 
 	@Column('varchar', {
 		length: 1024,
-		default: 'https://github.com/splamei/sky',
+		default: 'https://github.com/splamei/splamei-sky',
 		nullable: true,
 	})
 	public repositoryUrl: string | null;

@@ -2,10 +2,10 @@
 	<span align="center">Splamei Sky
 </h1>
 <p align="center">
-	<img src="https://img.shields.io/github/check-runs/splamei/sky/master">
-	<img src="https://img.shields.io/github/issues/splamei/sky">
-	<img src="https://img.shields.io/github/license/splamei/sky">
-	<img src="https://img.shields.io/github/repo-size/splamei/sky">
+	<img src="https://img.shields.io/github/check-runs/splamei/splamei-sky/master">
+	<img src="https://img.shields.io/github/issues/splamei/splamei-sky">
+	<img src="https://img.shields.io/github/license/splamei/splamei-sky">
+	<img src="https://img.shields.io/github/repo-size/splamei/splamei-sky">
 </p>
 
 ## Heads up!
@@ -41,7 +41,7 @@ This fork does maintain upstream changes which we sync every so often.
 ### Using the repo
 
  1. Clone the repo and use the main branch
-    - `git clone -b master https://github.com/splamei/sky.git`
+    - `git clone -b master https://github.com/splamei/splamei-sky.git`
     - `cd misskey`
     - `git checkout master`
 2. Create `.config/default.yml` and have the contents the same as the `.config/docker_example.yml` file from this repo with some adjustments you would like

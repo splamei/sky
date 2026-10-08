@@ -19,7 +19,7 @@ export function genOpenapiSpec(config: Config, includeSelfRef = false) {
 
 		externalDocs: {
 			description: 'Repository',
-			url: 'https://github.com/splamei/sky',
+			url: 'https://github.com/splamei/splamei-sky',
 		},
 
 		servers: [{

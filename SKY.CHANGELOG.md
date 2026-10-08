@@ -9,6 +9,7 @@ This file is to track each version and changes. If you want exact dates for chan
 
 ## Changes
 
+- Updated the repository URL from 'https://github.com/splamei/sky' to 'https://github.com/splamei/splamei-sky'
 - Changed the English text 'To Misskey' to 'To Splamei Sky'
 - Change the content of the blank notification to read 'Splamei Sky v' instead of 'Misskey v', both followed by the version
 - Improved the `deploy.yml` GitHub workflow to better push new images (updates) to GitHub Packages

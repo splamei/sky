@@ -8,7 +8,7 @@ When reporting security issues, please report anything affecting Misskey itself 
 
 If you find a security vulnerability in this repo, please report it to us via GitHub Security Advisories below:
 
-https://github.com/splamei/sky/security/advisories/new
+https://github.com/splamei/splamei-sky/security/advisories/new
 
 Please **do not** open and issue or pull request for security issues so we can keep everyone safe!
 
