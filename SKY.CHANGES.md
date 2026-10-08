@@ -16,6 +16,7 @@ DD-MM-YYYY is used here
 
 - Changed the English text 'To Misskey' to 'To Splamei Sky'
 - Change the content of the blank notification to read 'Splamei Sky v' instead of 'Misskey v', both followed by the version
+- Improved the `deploy.yml` GitHub workflow to better push new images (updates) to GitHub Packages
 
 # 23-09-2026
 
