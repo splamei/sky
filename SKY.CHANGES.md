@@ -6,6 +6,12 @@ We'll seperate the changes into 'Changes' (changes we make specifically for this
 
 DD-MM-YYYY is used here
 
+# 08-10-2026
+
+## Changes
+
+- Changed the English text 'To Misskey' to 'To Splamei Sky'
+
 # 23-09-2026
 
 ## Syncs
