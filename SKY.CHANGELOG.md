@@ -1,5 +1,21 @@
 This file is to track each version and changes. If you want exact dates for changes, check out `SKY.CHANGES.md` instead.
 
+# v1.0.2
+
+## Syncs
+
+- Synced with Misskey version 2026.10.0 and merged changes
+- Synced with Misskey version 2026.9.1 and merged changes
+
+## Changes
+
+- Changed the English text 'To Misskey' to 'To Splamei Sky'
+- Change the content of the blank notification to read 'Splamei Sky v' instead of 'Misskey v', both followed by the version
+- Improved the `deploy.yml` GitHub workflow to better push new images (updates) to GitHub Packages
+- Changed some EN-US locale text to use Splamei Sky branding instead of Misskey
+- Updated some assets to use Splamei Sky branding instead of Misskey branding (logo, favicon, etc.)
+- Updated the version from 1.0.1 to 1.0.2
+
 # v1.0.1
 
 Based on Misskey v2026.9.0
@@ -10,7 +26,7 @@ Based on Misskey v2026.9.0
 
 ## Changes
 
-- Changed the embed colour from MIsskey's Green to a purple colour
+- Changed the embed colour from Misskey's Green to a purple colour
 - Changed the name in the about overview (about instance) page to use the name Splamei Sky instead of Misskey
 - Updated the version to v1.0.1
 
