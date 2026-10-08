@@ -15,6 +15,7 @@ DD-MM-YYYY is used here
 ## Changes
 
 - Changed the English text 'To Misskey' to 'To Splamei Sky'
+- Change the content of the blank notification to read 'Splamei Sky v' instead of 'Misskey v', both followed by the version
 
 # 23-09-2026
 
