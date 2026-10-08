@@ -8,6 +8,10 @@ DD-MM-YYYY is used here
 
 # 08-10-2026
 
+## Syncs
+
+- Synced with Misskey version 2026.10.0 and merged changes
+
 ## Changes
 
 - Changed the English text 'To Misskey' to 'To Splamei Sky'
